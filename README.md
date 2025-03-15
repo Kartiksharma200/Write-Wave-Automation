@@ -1,4 +1,4 @@
-# Write-Wave-Automation
+# Write-Wave-Manual Testing
 ## Testing Approach
 This project follows a structured manual testing approach, ensuring the application's reliability and functionality. The following testing artifacts have been created:
 
@@ -48,3 +48,11 @@ WRITE-WAVE
 │── testng.xml                # TestNG suite configuration
 
 ~~~
+## Prerequisites
+Ensure you have the following installed before running the tests:
+- Java (JDK 8 or later)
+- Maven
+- Selenium WebDriver
+- TestNG
+- POM (Page Object Modal)
+
