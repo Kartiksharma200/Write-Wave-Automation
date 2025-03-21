@@ -1,62 +1,99 @@
-# Write-Wave-Manual Testing
-## Testing Approach
-This project follows a structured manual testing approach, ensuring the application's reliability and functionality. The following testing artifacts have been created:
-
-- *Test Plan:* Defines the testing scope, objectives, and methodology.
-- *Test Scenarios:* Identifies different functional and non-functional scenarios to test.
-- *Test Cases:* Documents detailed test steps, expected results, and actual results.
-- *Bug Report:* Logs issues found during testing with severity and steps to reproduce.
-- *Test Summary Report:* Summarizes the testing outcomes and overall quality assessment.
-- *Test Mind Map:* A visual representation of the testing strategy and coverage.
-
-## How to Use
-1. *Review Test Plan*: Understand the scope and objectives of the testing process.
-2. *Analyze Test Scenarios*: Identify the key functionalities being tested.
-3. *Execute Test Cases*: Follow the test steps and compare expected vs. actual results.
-4. *Log Bugs*: If defects are found, report them in the bug report.
-5. *Review Test Summary*: Assess the overall quality of the application.
-
-## Contributing
-If you wish to contribute, feel free to update the test documents or report additional bugs.
-# WriteWave Automation Testing
+# WriteWave Testing and Automation
 
 ## Project Overview
-WriteWave is an automated testing project for the WriteWave application, ensuring its functionalities work as expected. This project utilizes Selenium with Java for UI automation testing.
 
+This repository encompasses both manual and automated testing efforts for the WriteWave application. It includes test planning, test scenarios, test cases, bug reports, test summaries, and automation scripts to ensure the application's functionality and quality.
 
-
+# Directory Structure
 ~~~
-WRITE-WAVE
-│── src/main/java
-│   ├── pages                 # Page Object Model classes
-│   │   ├── CreatePostPage.java
-│   │   ├── DashboardPage.java
-│   │   ├── LoginPage.java
-│   ├── utils                 # Utility classes
-│   │   ├── DriverManager.java
-│── src/main/resources
-│── src/test/java
-│   ├── tests                 # Test scripts
-│   │   ├── LoginTest.java
-│── src/test/resources
-│── JRE System Library [JavaSE-1.8]
-│── Maven Dependencies
-│── src
-│── target
-│── test-output
-│── pom.xml                   # Maven dependencies
-│── testng.xml                # TestNG suite configuration
-
+writewave/
+├── README.md                                 # Project documentation
+├── manual_testing/
+│   ├── Test Plan for WriteWave.docx          # Test plan document
+│   ├── Test Scenarios for WriteWave.xlsx     # Test scenarios document
+│   ├── Test Cases for WriteWave.xlsx         # Test cases document
+│   ├── Bug Report for WriteWave.xlsx         # Bug report document
+│   ├── Test Summary Report for WriteWave.docx# Test summary report
+│   └── Test Mind Map for WriteWave.png       # Test mind map
+└── automation_testing/
+    ├── src/
+    │   ├── main/
+    │   │   └── java/
+    │   │       ├── base/
+    │   │       │   └── BaseTest.java         # Base class for test setup and teardown
+    │   │       ├── pages/
+    │   │       │   ├── LoginPage.java        # Page Object Model (POM) for Login Page
+    │   │       │   ├── DashboardPage.java    # POM for Dashboard Page
+    │   │       │   └── CreatePostPage.java   # POM for Create Post Page
+    │   │       └── tests/
+    │   │           ├── LoginTest.java        # Test cases for Login functionality
+    │   │           └── CreatePostTest.java   # Test cases for Create Post functionality
+    │   └── test/
+    │       └── java/                         # Additional test-specific code if needed
+    ├── pom.xml                               # Maven dependencies and configurations
+    ├── testng.xml                            # TestNG test suite configuration
+    ├── drivers/                              # WebDriver executables (e.g., chromedriver)
+    ├── reports/                              # Test execution reports
+    ├── logs/                                 # Log files for debugging
+    └── screenshots/                          # Screenshots for failed test cases
 ~~~
-## Prerequisites
-Ensure you have the following installed before running the tests:
-- Java (JDK 8 or later)
-- Maven
-- Selenium WebDriver
-- TestNG
-- POM (Page Object Modal)
+# Manual Testing Approach
 
-  ##Video Explaination Links
-  https://drive.google.com/file/d/1lkbTFUT1gmXMvy5HIgR5Ozkmu4GC2US5/view?usp=sharing
-  
+## The manual testing process includes:
 
+Test Plan: Defines the testing scope, objectives, and methodology.
+
+Test Scenarios: Identifies different functional and non-functional scenarios to test.
+
+Test Cases: Documents detailed test steps, expected results, and actual results.
+
+Bug Report: Logs issues found during testing with severity and steps to reproduce.
+
+Test Summary Report: Summarizes the testing outcomes and overall quality assessment.
+
+Test Mind Map: A visual representation of the testing strategy and coverage.
+
+# Automation Testing Approach
+
+The automation framework is built using Selenium with Java, following the Page Object Model (POM) design pattern. It integrates best practices for maintainability and scalability, supporting TestNG for test execution and Maven for dependency management.
+
+## Features
+
+Page Object Model (POM): Enhances test maintainability by separating page elements and actions.
+
+TestNG Integration: Facilitates structured test execution and reporting.
+
+Maven for Dependency Management: Simplifies project setup and dependency handling.
+
+Cross-Browser Testing: Ensures application functionality across different browsers.
+
+Detailed Reporting: Generates comprehensive test execution reports.
+
+# Prerequisites
+
+Java Development Kit (JDK) 8 or higher
+
+Maven
+
+Selenium WebDriver
+
+TestNG
+
+An IDE like IntelliJ IDEA or Eclipse
+
+
+# Install Dependencies:
+~~~
+mvn clean install
+~~~
+Running Tests
+
+Execute All Tests:
+~~~
+mvn test
+~~~
+Execute Specific Test Suite:
+~~~
+mvn test -DsuiteXmlFile=testng.xml
+~~~
+## video link: 
